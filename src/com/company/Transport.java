@@ -9,7 +9,6 @@ public class Transport {
     public String getName() {
         return name;
     }
-
     public Transport(String name) {
         this.name = name;
     }

@@ -1,17 +1,11 @@
 package com.company;
 
-final public class Volvo extends Car{
+final public class Volvo extends Car {
     private String model;
     private String frame;
 
-
-    public Volvo(String model, String frame) {
-        this.model = model;
-        this.frame = frame;
-    }
-
-    public Volvo(String name, String model, String frame) {
-        super(name);
+    public Volvo(String name, int year, EnumColors enumColors, String model, String frame) {
+        super(name, year, enumColors);
         this.model = model;
         this.frame = frame;
     }
@@ -24,9 +18,6 @@ final public class Volvo extends Car{
         return model;
     }
 
-    public Volvo(String model) {
-        this.model = model;
-    }
 
     @Override
     public void moveKmL() {
@@ -35,9 +26,8 @@ final public class Volvo extends Car{
 
     @Override
     public String getInfo() {
-        return super.getInfo() +
-        "\nName: " + name +
-        "\nModel: " + model +
-        "\n Type of car: " + frame ;
+            return super.getInfo() +
+                    "\nModel: " + model +
+                    "\n Type of car: " + frame;
+        }
     }
-}
